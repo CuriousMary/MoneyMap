@@ -1,0 +1,9 @@
+body {
+    background-color: hsl(0, 0%, 20%); /* Dark shade of gray */
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
