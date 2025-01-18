@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Map</title>
+    <script src="investmentcalc.js" defer></script>
+    <!-- Bootstrap CSS - CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <h1 class="text-center pt-5">Compound Investment Calculator</h1>
+    <div class="container">
+        <div class="row justify-content-center pt-5">
+            <!-- Investment Form Column -->
+            <div class="col-md-5 mb-3">
+                <div class="card d-flex justify-content-center align-items-center" style="width: 100%; height: auto;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Investment</h5>
+                        <form>
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Initial Investment</label>
+                                <input type="text" id="amount" name="amount" class="form-control" placeholder="Initial Investment £">
+                            </div>
+                            <div class="mb-3">
+                                <label for="years" class="form-label">Years</label>
+                                <input type="text" id="years" name="years" class="form-control" placeholder="Years">
+                            </div>
+                            <div class="mb-3">
+                                <label for="weeklyContributions" class="form-label">Weekly Contributions</label>
+                                <input type="text" id="weeklyContributions" class="form-control" placeholder="Weekly Contributions £">
+                            </div>
+                            <div class="mb-3">
+                                <label for="interest" class="form-label">Interest Rate</label>
+                                <input type="text" id="interest" class="form-control" placeholder="Interest Rate %">
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-primary" id="calculateBtn">Calculate</button>
+                        <div id="result"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Investment Chart Column -->
+            <div class="col-md-5 mb-3">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 mb-3 pd-flex align-items-center justify-content-center">
+                        <canvas id="myBar" style="width:100%;max-width:700px"></canvas>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <div class="card" style="width: 100%; height: auto;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Projected Investment Value:</h5>
+                                <div id="investmentResult"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
